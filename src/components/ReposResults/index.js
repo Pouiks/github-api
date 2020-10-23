@@ -1,7 +1,7 @@
 // == Import npm
 import React from 'react';
-import Result from 'src/components/ReposResults';
 import { Card, Image } from 'semantic-ui-react';
+import Result from './result';
 import './reposresults.scss';
 
 // == Import
@@ -16,7 +16,7 @@ const ReposResults = ({ dataToLoad }) => {
 
         dataToLoad.map((data) => (
 
-          <Result key={data.id} {...data} />
+          <Result key={data.id} data={data} />
 
         ))
       }

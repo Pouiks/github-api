@@ -30,7 +30,7 @@ const App = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log('Je suis HANDLESUBMIT: ', value);
-    fetchData();
+    fetchData(event.target.value);
   };
   const onChangeData = (event) => {
     console.log('Je suis ONCHANGEDATA: ', event.target.value);
@@ -38,7 +38,7 @@ const App = () => {
   };
   useEffect(() => {
     fetchData();
-    console.log("je passe dans le useEffect")
+    console.log('je passe dans le useEffect');
   }, []);
 
   return (
